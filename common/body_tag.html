@@ -1,0 +1,86 @@
+<!-- <script type="text/discourse-plugin" version="0.8">
+  // This is the plugin outlet, followed by a custom name for the component
+  api.registerConnectorClass("before-create-topic-button", "custom-buttons", {
+
+    // Setting up our component
+    setupComponent(args, component) {
+
+      // Next we're getting the site setting 'top_menu',
+      // splitting the values into an array,
+      // and adding a leading slash
+      var topMenuRoutes = 
+        component.siteSettings.top_menu.split('|')
+        .map(function(route) {return '/' + route});
+      
+      // The first page listed in the 'top_menu' setting is your homepage
+      // lets assign it to a variable
+      var homeRoute = topMenuRoutes[0];
+  
+      // This calls our code whenever the page changes
+      api.onPageChange((url) => {
+
+        // Check if we're on the homepage 
+        if (url === "/" || url === homeRoute ){ 
+          // If it's the homepage add the 'custom-buttons' class to HTML tag
+          // and set 'displayCustomButtons' to true
+          document.querySelector("html").classList.add("custom-buttons"); 
+          component.set("displayCustomButtons", true); 
+        } else {  
+          // If we're not on the homepage remove the class
+          // and set `displayCustomButtons` to false
+          document.querySelector("html").classList.remove("custom-buttons"); 
+          component.set("displayCustomButtons", false); 
+        }
+      });
+    }
+    
+  });
+
+</script> -->
+
+<script type="text/discourse-plugin" version="0.8">
+  api.modifyClass("component:add-topic-status-classes", {
+    didInsertElement: function() {
+      this._super();
+      console.log("Welcome to the categories page!1")
+    }
+  });
+</script>
+
+<script type="text/discourse-plugin" version="0.8">
+  api.modifyClass("component:choose-topic", {
+    didInsertElement: function() {
+      this._super();
+      console.log("Welcome to the categories page!2")
+    }
+  });
+</script>
+
+<script type="text/discourse-plugin" version="0.8">
+  api.modifyClass("component:categories-topic-list", {
+    didInsertElement: function() {
+      this._super();
+      console.log("Welcome to the categories page!3")
+    }
+  });
+</script>
+
+<script type="text/discourse-plugin" version="0.8">
+  api.modifyClass("component:categories-and-latest-topics", {
+    didInsertElement: function() {
+      this._super();
+      console.log("Welcome to the categories page!4")
+    }
+  });
+</script>
+
+<!-- <script type="text/x-handlebars" data-template-name="/connectors/before-create-topic-button/custom-buttons">
+  {{#if displayCustomButtons}} 
+    <span class="custom-button-wrapper wrap">
+        <!-- This div with the class "wrap" will match the max-width
+            of Discourse's content. If you want your content to be the 
+            full browser width you can remove the div. 
+        <!-- Your HTML here -->
+        "New Project"
+  {{/if}}
+</script> -->
