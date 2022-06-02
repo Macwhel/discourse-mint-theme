@@ -1,6 +1,7 @@
 <script type="text/discourse-plugin" version="0.8">
 api.modifyClass("component:discovery-topics-list", {
     didInsertElement: function() {
+    this._super();
     console.log("Found it")
     }
 });
