@@ -2,8 +2,9 @@
 
     api.modifyClass("component:discovery-topics-list", {
     didInsertElement: function() {
-    console.log("Found it")
-    <div>What pops up here?</div>
+        this._super();
+        console.log("Found it")
+        <div>What pops up here?</div>
     }
 });
 </script>
