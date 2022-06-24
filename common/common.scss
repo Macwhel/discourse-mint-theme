@@ -109,7 +109,7 @@ input[type="color"]:focus,
   }
 }
 
-.btn-default #create-topic {
+button#create-topic.btn-default.btn.btn-icon-test.ember-view {
   display:none;
 }
 
