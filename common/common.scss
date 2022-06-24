@@ -109,6 +109,10 @@ input[type="color"]:focus,
   }
 }
 
+d-button-label {
+  display:none;
+}
+
 .search-widget .search-context {
   padding: 10px;
   background-color: var(--tertiary-medium);
