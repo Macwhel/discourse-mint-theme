@@ -1,21 +1,8 @@
 <script type="text/discourse-plugin" version="0.8">
-  api.registerConnectorClass("before-create-topic-button", "custom-button" {
-    setupComponent(args, component) {
-        api.onPageChange((url) => {
-            if (url === '/') {
-            component.set("displayCustomButton", true);
-            console.log("true!");
-            } else {
-            component.set("displayCustomButton", false);
-            console.log("false!");
-            }
-        });
+  api.modifyClass("component:discovery-topics-list", {
+    didInsertElement: function() {
+      this._super();
+      console.log("Welcome to the discover topics list!")
     }
   });
-</script>
-  
-<script type="text/x-handlebars" data-template-name="/connectors/before-create-topic-button/custom-button">
-  {{#if displayCustomButton}} 
-    hihihihihihii
-  {{/if}}
 </script>
