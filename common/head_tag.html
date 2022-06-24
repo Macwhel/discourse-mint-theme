@@ -1,9 +1,17 @@
-<script type="text/x-handlebars" data-template-name="/connectors/before-create-topic-button/custom-button">
-  api.onPageChange((url) => {
-    if (url === '/') {
-      <div>hihihihhi</div>
-    } else {
-      <div>nonononoo</div>
-    }
-  });
-</script>
+<script type="text/discourse-plugin" version="0.8">
+    api.onPageChange((url) => {
+      if (url === '/') {
+        component.set("displayCustomButton", true);
+      } else {
+        component.set("displayCustomButton", false);
+      }
+    });
+  </script>
+  
+  <script type="text/x-handlebars" data-template-name="/connectors/before-create-topic-button/custom-button">
+    {{#if displayCustomButton}} 
+      <div class="custom-homepage-wrapper wrap">
+         hihihihihihii
+      </div>
+    {{/if}}
+  </script>
