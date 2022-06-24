@@ -1,5 +1,7 @@
 <script type="text/discourse-plugin" version="0.8">
   api.modifyClass("component:discovery-topics-list", {
-    console.log("Welcome to the discover topics list!")
+    api.decorateWidget('create-button:before', helper => {
+      return helper.h('p', 'What is going on');
+    })
   });
 </script>
