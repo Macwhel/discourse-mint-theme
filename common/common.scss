@@ -109,6 +109,9 @@ input[type="color"]:focus,
   }
 }
 
+.btn-default #create-topic {
+  display:none
+}
 
 .search-widget .search-context {
   padding: 10px;
