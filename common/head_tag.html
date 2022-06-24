@@ -1,5 +1,5 @@
 <script type="text/discourse-plugin" version="0.8">
-  api.registerConnectorClass("before-create-topic-button", "custom-button") {
+  api.registerConnectorClass("before-create-topic-button", "custom-button" {
     setupComponent(args, component) {
         api.onPageChange((url) => {
             if (url === '/') {
@@ -11,7 +11,7 @@
             }
         });
     }
-  }
+  });
 </script>
   
 <script type="text/x-handlebars" data-template-name="/connectors/before-create-topic-button/custom-button">
