@@ -109,7 +109,7 @@ input[type="color"]:focus,
   }
 }
 
-navigation-categories button#create-topic {
+.staff button#create-topic, .navigation-categories button#create-topic, categories-list button#create-topic {
   display:none;
 }
 
