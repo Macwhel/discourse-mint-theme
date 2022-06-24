@@ -1,11 +1,17 @@
 <script type="text/discourse-plugin" version="0.8">
-  api.onPageChange((url) => {
-    if (url === '/') {
-      component.set("displayCustomButton", true);
-    } else {
-      component.set("displayCustomButton", false);
+  api.registerConnectorClass("before-create-topic-button", "custom-button") {
+    setupComponent(args, component) {
+        api.onPageChange((url) => {
+            if (url === '/') {
+            component.set("displayCustomButton", true);
+            console.log("true!");
+            } else {
+            component.set("displayCustomButton", false);
+            console.log("false!");
+            }
+        });
     }
-  });
+  }
 </script>
   
 <script type="text/x-handlebars" data-template-name="/connectors/before-create-topic-button/custom-button">
