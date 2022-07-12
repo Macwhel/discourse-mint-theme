@@ -113,6 +113,10 @@ input[type="color"]:focus,
   display:none;
 }
 
+.navigation-categories button#all-hyp, .navigation-categories button#all-post {
+  display:none;
+}
+
 .search-widget .search-context {
   padding: 10px;
   background-color: var(--tertiary-medium);
