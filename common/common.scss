@@ -109,12 +109,10 @@ input[type="color"]:focus,
   }
 }
 
-.navigation-categories button#create-topic, .categories-list button#create-topic, .navigation-topics button#create-topic {
-  display:none;
-}
-
-#categories-list .all-hyp, #categories-list .all-post {
-  display:none;
+.navigation-categories, .categories-list, .navigation-topics {
+  button#create-topic, .all-hyp, .all-post {
+    display:none;
+  }
 }
 
 .search-widget .search-context {
